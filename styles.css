@@ -89,17 +89,24 @@
     background-color: rgba(0, 255, 0, 0.3);
 }
 @media only screen and (max-width: 600px) {
-    .game-info {
-        font-size: 1rem; /* Adjust font size for smaller screens */
-        padding: 0.5rem 1rem; /* Adjust padding for smaller screens */
-    }
-
     .tic-tac-toe {
-        width: 80%; /* Adjust width for smaller screens */
+        max-width: 80vw; /* Adjust width for smaller screens */
     }
 
     .box {
         font-size: 2rem; /* Adjust font size for smaller screens */
+        border: none; /* Remove borders for individual boxes */
+        border-bottom: 2px solid white; /* Add bottom border for separation */
+        border-right: 2px solid white; /* Add right border for separation */
+        background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .box:nth-child(3n) {
+        border-right: none; /* Remove right border for every third box in a row */
+    }
+
+    .box:nth-last-child(-n + 3) {
+        border-bottom: none; /* Remove bottom border for last three boxes */
     }
 
     .btn {
